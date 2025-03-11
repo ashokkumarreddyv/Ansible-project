@@ -10,5 +10,5 @@
     - name: install nginx
       ansible.builtin.dnf:
         name: nginx
-        status: installed
+        state: installed
 
