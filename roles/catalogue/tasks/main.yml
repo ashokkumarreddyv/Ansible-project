@@ -34,22 +34,22 @@
 
 
 
-  - name: install npm
-    ansible.builtin.dnf:
+- name: install npm
+  ansible.builtin.dnf:
       name: npm
       state: installed
 
-  - name: mongodb-mongosh -y
-    ansible.builtin.dnf:
+- name: mongodb-mongosh -y
+  ansible.builtin.dnf:
       name: mongodb-mongosh
       state: installed
 
-  - name: enable service catalogue
-    ansible.builtin.service:
+- name: enable service catalogue
+  ansible.builtin.service:
       name: catalogue
       state: restarted
       enabled: true
 
-  - name: load master data
-    ansible.builtin.shell: mongosh --host 172.31.25.195 </app/db/master-data.js
+- name: load master data
+  ansible.builtin.shell: mongosh --host 172.31.25.195 </app/db/master-data.js
 
