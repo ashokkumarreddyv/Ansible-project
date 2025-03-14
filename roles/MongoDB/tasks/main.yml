@@ -6,8 +6,8 @@
 
 - name: install mongodb-org -y
   ansible.builtin.dnf:
-   name: mongodb-org -y
-   state: installed
+    name: mongodb-org
+    state: installed
 
 - name: Replace port in config file
   ansible.builtin.replace:
