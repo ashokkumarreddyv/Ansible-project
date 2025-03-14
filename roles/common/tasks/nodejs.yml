@@ -16,3 +16,9 @@
 
   - name: install nodejs dependencies
     ansible.builtin.sell: npm install
+    args:
+      chdir: /app
+
+  - name: system_setup
+    ansible.builtin.include_tasks:
+      file: system_setup.yml
