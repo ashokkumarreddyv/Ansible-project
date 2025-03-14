@@ -8,6 +8,6 @@
     src: "{{ component_name }}"
     state: restarted
     enabled: yes
-    demon_reload: yes
+    daemon-reload: yes
 
 
