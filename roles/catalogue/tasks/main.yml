@@ -26,8 +26,8 @@
     state: directory
 
 
-  - name: Download the file and extract
-    ansible.builtin.unarchive:
+- name: Download the file and extract
+  ansible.builtin.unarchive:
       src: "https://roboshop-artifacts.s3.amazonaws.com/catalogue-v3.zip"
       dest: /app
       remote_src: yes
@@ -50,6 +50,6 @@
       state: restarted
       enabled: true
 
-  -name: load master data
-   ansible.builtin.shell: mongosh --host 172.31.25.195 </app/db/master-data.js
+  - name: load master data
+    ansible.builtin.shell: mongosh --host 172.31.25.195 </app/db/master-data.js
 
