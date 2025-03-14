@@ -50,10 +50,12 @@
   ansible.builtin.shell: mongosh --host 172.31.25.195 </app/db/master-data.js
 
 
-- name: Start servive
+- name: Start service
   ansible.builtin.systemd_service:
     src: catalogue
     state: restarted
-    enabled: yes
+    enabled: true
     demon_reload: yes
+
+
 
