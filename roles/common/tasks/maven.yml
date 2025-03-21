@@ -1,4 +1,4 @@
-- name: install Maveen
+- name: install maven
   ansible.builtin.dnf:
     name: maven
     state: installed
@@ -7,8 +7,8 @@
   ansible.builtin.include_tasks:
     file: artifact_download.yml
 
-- name: install maveen dependencies
-  ansible.builtin.sell: mveen cleanup pacakage ; mv target/{{ component_name }}-1.0.jar {{ component_name }}.jar
+- name: install maven dependencies
+  ansible.builtin.sell: maven cleanup pacakage ; mv target/{{ component_name }}-1.0.jar {{ component_name }}.jar
   args:
     chdir: /app
 
