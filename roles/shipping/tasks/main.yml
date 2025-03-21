@@ -11,13 +11,13 @@
     state: installed
 
 - name: install load schema
-  ansible.builtin.shell: mysql -h <MYSQL-SERVER-IPADDRESS> -uroot -pRoboShop@1 < /app/db/schema.sql
+  ansible.builtin.shell: mysql -h 172.31.25.195 -uroot -pRoboShop@1 < /app/db/schema.sql
 
 - name: install load user creation
-  ansible.builtin.shell: mysql -h <MYSQL-SERVER-IPADDRESS> -uroot -pRoboShop@1 < /app/db/app-user.sql
+  ansible.builtin.shell: mysql -h 172.31.25.195 -uroot -pRoboShop@1 < /app/db/app-user.sql
 
 - name: install load master data
-  ansible.builtin.shell: mysql -h <MYSQL-SERVER-IPADDRESS> -uroot -pRoboShop@1 < /app/db/master-data.sql
+  ansible.builtin.shell: mysql -h 172.31.25.195 -uroot -pRoboShop@1 < /app/db/master-data.sql
 
 
 
