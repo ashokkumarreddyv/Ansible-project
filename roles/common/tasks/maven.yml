@@ -8,7 +8,7 @@
     file: artifact_download.yml
 
 - name: install maven dependencies
-  ansible.builtin.sell: maven cleanup pacakage ; mv target/{{ component_name }}-1.0.jar {{ component_name }}.jar
+  ansible.builtin.shell: maven cleanup pacakage ; mv target/{{ component_name }}-1.0.jar {{ component_name }}.jar
   args:
     chdir: /app
 
