@@ -7,7 +7,7 @@
 
 - name: Start service
   ansible.builtin.systemd_service:
-    src: "mysqld"
+    src: mysqld
     state: restarted
     enabled: yes
 
